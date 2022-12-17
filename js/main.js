@@ -177,18 +177,17 @@ let name_ = "muhammad";
 let password = 7777;
 let money = 10000;
 
-let bank = 0.97;
-
 let a = prompt("Please write your name: ");
 if (a == name_) {
   let b = +prompt("Write your password");
   if (b == password) {
     let c = +prompt("Write the amount");
-    if (c == money) {
-      money = money - c;
-      let i = alert("Balance:\n " + money + "\nTaken:\n" + c);
+    if (c <= money) {
+      money = c - money;
+      let i = alert("Balance:\n " + money + "\nTaken:\n" + c)
     } else {
       alert("Little amount of money");
+      
     }
   } else {
     alert(" WRONG");
